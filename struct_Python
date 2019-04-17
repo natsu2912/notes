@@ -1,0 +1,2 @@
+struct.pack(): used to convert a number(or numbers) in BIG-ENDIAN structure to a hex string in LITTLE-ENDIAN structure
+struct.unpack(): used to convert a hex string in LITTLE-ENDIAN structure to a tuble of numbers in BIG-ENDIAN structure
