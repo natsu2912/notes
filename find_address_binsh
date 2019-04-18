@@ -1,0 +1,9 @@
+Solution 1:
+  1. in GDB: "info proc mappings" & read address of libc
+  2. in terminal: "strings -a -t x [address_of_libc] | grep /bin/sh"
+    note: address in solution 1 in hexadecimal format
+  
+ Solution 2:
+  1.  in terminal: "ldd [program_name]", then read address of libc
+  2.  in terminal: grep -R -a -b -o /bin/sh [address_of_libc]
+    note: address in solution 2 in decimal format
