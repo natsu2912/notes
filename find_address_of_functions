@@ -1,0 +1,2 @@
+1. Read address of all functions: in gdb: "info functions" (must run program first)
+2. Read address of functions in plt: "info functions plt"
