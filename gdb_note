@@ -1,0 +1,15 @@
+#This file instruct how to make address inside and outside GDB are the same
+
+#The reason for this problem is GDB's adding 2 environment variables named LINES and COLUMNS, so we need to unset these 2 env var
+  Inside GDB, type:
+    unset environment LINES
+    unset environment COLUMNS
+
+#One more difference is the env var "_":
+  #Outside GDB: _=/path/to/the/file Ex: /opt/phoenix/amd64/stack-six
+  #Inside GDB:  _=/path/to/gdb      Ex: /usr/local/bin/gdb
+    Solution 1: Outside gdb, run file by command: env _=/path/to/gdb /path/to/file
+      Ex: env _=/usr/local/bin/gdb /opt/phoenix/amd64/stack-six
+    Solution 2: Inside gdb, modify the env var "_": type: set environment _=/path/to/file
+
+#Important: Path to the file and gdb must be absolute path
