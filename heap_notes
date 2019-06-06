@@ -16,3 +16,10 @@ Heap Architecture ofe a free lock:
 At the end of heap, there is a final block:
 	1.	Previous block size (4 bytes)
 	2. 	The remaining size of heap + prev_in_use_bit (4 bytes)
+	
+#define unlink(P, BK, FD) {                                            \
+  FD = P->fd;                                                          \
+  BK = P->bk;                                                          \
+  FD->bk = BK;                                                         \
+  BK->fd = FD;                                                         \
+}
