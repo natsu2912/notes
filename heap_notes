@@ -1,0 +1,17 @@
+Heap Architecture of a non-free block:
+		-----	Meta data	-----
+	1. Current block size + prev_in_use_bit (4 bytes) Ex: size = 0x16, prev_in_use_bit = 0x1, this part = 0x17
+		-----		Data 	-----
+	2. Data of current block
+
+Heap Architecture ofe a free lock:
+		----- 	Meta data 	-----
+	1. Previous block size (4 bytes)
+	2. Current block size + prev_in_use_bit (4 bytes)
+		-----	FWD & BCK 	-----
+	3. Pointer to FWD (use for unlink() function in malloc(), it is actually use for linked list)
+	4. Pointer to BCK (use for unlink() function in malloc(), it is actually use for linked list)
+	
+At the end of heap, there is a final block:
+	1.	Previous block size (4 bytes)
+	2. 	The remaining size of heap + prev_in_use_bit (4 bytes)
