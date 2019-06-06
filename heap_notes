@@ -2,7 +2,7 @@
 Heap Architecture of a non-free block:
 		-----	Meta data	-----
 	1. Current block size + prev_in_use_bit (4 bytes) Ex: size = 0x16, prev_in_use_bit = 0x1, this part = 0x17
-		-----		Data 	-----
+		-----	  Data 		-----
 	2. Data of current block
 
 Heap Architecture ofe a free lock:
