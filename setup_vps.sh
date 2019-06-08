@@ -1,6 +1,6 @@
 #Set up VPS
 apt-get update -y && apt-get upgrade -y
-apt-get install gdb
+apt-get install gdb -y
 
 #pwntools
 apt-get update -y
