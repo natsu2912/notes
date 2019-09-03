@@ -10,3 +10,15 @@ sudo pip install --upgrade pwntools
 sudo apt install net-tools -y
 
 #Install peda, one_gadget, ROPGadget later
+#peda
+git clone https://github.com/longld/peda.git ~/peda
+echo "source ~/peda/peda.py" >> ~/.gdbinit
+echo "DONE! debug your program with gdb and enjoy"
+
+#one_gadget
+apt-get install ruby -y
+gem install one_gadget
+
+#ROPgadget
+sudo pip install capstone
+sudo pip install ropgadget
