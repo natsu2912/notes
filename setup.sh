@@ -9,11 +9,16 @@ sudo pip install --upgrade pwntools
  
 sudo apt install net-tools -y
 
-#Install peda, one_gadget, ROPGadget later
+#Install peda, pwndbg, one_gadget, ROPGadget later
 #peda
 git clone https://github.com/longld/peda.git ~/peda
 echo "source ~/peda/peda.py" >> ~/.gdbinit
 echo "DONE! debug your program with gdb and enjoy"
+
+#pwndbg
+git clone https://github.com/pwndbg/pwndbg
+cd pwndbg
+./setup.sh
 
 #one_gadget
 apt-get install ruby -y
