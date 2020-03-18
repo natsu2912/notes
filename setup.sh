@@ -1,5 +1,6 @@
 sudo apt update -y
 sudo apt upgrade -y
+sudo apt install openssh-server
 sudo apt install gdb -y
 sudo apt install gcc -y
 sudo apt install vim -y
