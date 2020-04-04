@@ -21,12 +21,12 @@ cd pwndbg
 ./setup.sh
 
 #one_gadget
-apt-get install ruby -y
+sudo apt install ruby -y
 gem install one_gadget
 
 #ROPgadget
-sudo pip install capstone
-sudo pip install ropgadget
+sudo python -m pip install capstone
+sudo python -m pip install ropgadget
 
 #SSH
-sudo apt install openssh-server
+sudo apt install openssh-server -y
