@@ -27,3 +27,6 @@ gem install one_gadget
 #ROPgadget
 sudo pip install capstone
 sudo pip install ropgadget
+
+#SSH
+sudo apt install openssh-server
