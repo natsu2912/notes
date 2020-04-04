@@ -1,20 +1,19 @@
 sudo apt update -y
 sudo apt upgrade -y
-sudo apt install openssh-server
 sudo apt install gdb -y
 sudo apt install gcc -y
 sudo apt install vim -y
 sudo apt install python2.7 python-pip python-dev git libssl-dev libffi-dev build-essential -y
-sudo pip install --upgrade pip
-sudo pip install --upgrade pwntools
+sudo python -m pip install --upgrade pip
+sudo python -m pip install --upgrade pwntools
  
 sudo apt install net-tools -y
 
-#Install peda, pwndbg, one_gadget, ROPGadget later
+#Install peda, one_gadget, ROPGadget later
 #peda
-git clone https://github.com/longld/peda.git ~/peda
-echo "source ~/peda/peda.py" >> ~/.gdbinit
-echo "DONE! debug your program with gdb and enjoy"
+#git clone https://github.com/longld/peda.git ~/peda
+#echo "source ~/peda/peda.py" >> ~/.gdbinit
+#echo "DONE! debug your program with gdb and enjoy"
 
 #pwndbg
 git clone https://github.com/pwndbg/pwndbg
