@@ -22,7 +22,7 @@ cd pwndbg
 
 #one_gadget
 sudo apt install ruby -y
-gem install one_gadget
+sudo gem install one_gadget
 
 #ROPgadget
 sudo python -m pip install capstone
